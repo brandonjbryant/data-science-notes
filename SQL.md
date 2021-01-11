@@ -1,0 +1,47 @@
+## Review Questions from Yesterday
+- What is SQL?
+    - SQL stands for “Structured Query Language”. Think of SQL like Latin.
+    - Specific DB Platforms run their own flavor of SQL:
+        - MySQL (we’ll use in class)
+        - Microsoft SQL Server
+        - Oracle
+        - Postgres
+    - A “SQL Server” means a computer that’s running a specific SQL DB like MySQL
+    - We’ll connect to a MySQL Server in the cloud and you have your own login
+- We’ll do Time Series Analysis on temporal data
+    - We do Time Series Analysis (TSA) when time is an explanatory variable
+    - We use Time Series when the target variable we’re interested in is correlated with itself (from the past)
+        - Saving account growing interest over time
+        - For example, current temperature is correlated with past temperatures
+            - last 7 days of temps
+            - could be this time last year
+    - If there’s any explanatory value from time and we’re looking at that time, then we’re doing TSA.
+    - Concrete Example:
+        - If our goal is to predict stock market prices based on:
+            - season or month
+            - moon cycle
+            - what the price was this time last year... or 5 years ago
+            - this is Time Series Analysis
+        - Predicting stock price based on price to earnings ratio (/w no time data in the dataset)
+            - this would be an example of a regression.
+            - b/c regression is predicting how many or how much of the target variable
+- Example of Classification (Is this observation A or B or C or D...)
+    - Supervised learning task b/c we have labels
+    - Our target variable w/ a classification is a categorical variable we’re trying to predict.
+    - Example: Predicting the specific species of iris flower given petal measurements and sepal measurements
+        - Our target would be predicting what type of iris (virginica, setosa, verisocolor)
+        - Our independent variables are the measurements of the flower pieces
+        - Our training data to fit a model will have labeled species
+    - Example:
+        - We have HR data for a company and our target is Attrition (attrition = if people leave or stay)
+        - IN our dataset, we have a few columns and the target variable as a column
+        - Independent variables would be:
+            - compensation rate (continuous)
+            - on a scale of 1-5, their work-life balance (categorical)
+            - on a scale of 1-3, their amount of travel (none, some, lots) (categorical)
+        - our target w/ attrition is a binary (yes/no)
+    - Classification is all about using our features to develop a decision rule for classifying our outcomes as A or B (or C or D or E)
+    - Is Regression supervised/unsupervised? Supervised == labels == answers
+    - Data Governance = data policy
+        - what do we keep? Why? Who has access? Regulatory requirements, etc...
+        - security policy
